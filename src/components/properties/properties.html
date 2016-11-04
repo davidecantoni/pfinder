@@ -1,0 +1,51 @@
+<div class="properties" ng-controller="PropertiesController as ctrl" ng-init="getProperties()">
+  <div class="properties__text1">Explore the world</div>
+
+  <div ng-show="state == 'loading'" layout="row" layout-align="center center" layout-padding layout-margin>
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+  </div>
+
+  <div ng-show="state == 'loaded'" ng-carousel ng-carousel-name="properties__carousel" ng-carousel-watch="properties"
+       ng-carousel-timer="3000" style="height: auto;">
+    <slidecontainer>
+      <slide ng-repeat="feature in properties | limitTo: 6">
+        <div class="properties__item" layout-gt-xs="row" layout-align="center center">
+          <div flex>
+            <img class="properties__item-image"
+                 sizes="(max-width: 600px) 90vw, 50vw"
+                 ng-srcset="{{feature.links.logo}} 302w, {{feature.linkds.logo2x}} 1208w"
+                 ng-src="{{feature.links.logo}}" />
+          </div>
+          <div flex class="properties__item-content">
+            <div class="properties__item-title">
+              {{feature.name}}
+            </div>
+            <div class="properties__item-description">
+              {{feature.description | limitWordsTo:true:200:' ...'}}
+            </div>
+            <a href="#" class="properties__item-link">Read more ></a>
+          </div>
+        </div>
+      </slide>
+    </slidecontainer>
+    <div class="properties__carousel-arrow carousel-arrow carousel-arrow-left">
+      <md-button ng-click="Carousel.get('properties__carousel').previous()">
+        <md-icon class="material-icons md-48"> navigate_before </md-icon>
+      </md-button>
+    </div>
+    <div class="properties__carousel-arrow carousel-arrow carousel-arrow-right">
+      <md-button ng-click="Carousel.get('properties__carousel').next()">
+        <md-icon class="material-icons md-48"> navigate_next </md-icon>
+      </md-button>
+    </div>
+    <div class="properties__carousel-dots" layout="row" layout-align="center center">
+      <a href="#" class="properties__carousel-dot" ng-repeat="feature in properties | limitTo: 6"
+                 ng-click="Carousel.get('properties__carousel').toIndex($index)">
+          <md-icon class="material-icons md-16"
+                   ng-class="(Carousel.get('properties__carousel').currentSlide == $index) ? 'properties__carousel-active' : ''">
+            brightness_1
+          </md-icon>
+      </a>
+    </div>
+  </div>
+</div>

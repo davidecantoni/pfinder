@@ -1,0 +1,28 @@
+/***********************
+ Global styles
+ site-wide styles that are not wired to any component or page
+ ***********************/
+body {
+  background-color: #fff;
+}
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+  height: 48px;
+}
+.md-button {
+  text-transform: none !important;
+}
+
+// Third parties overrides
+.ng-carousel slidecontainer {
+  position: inherit;
+}

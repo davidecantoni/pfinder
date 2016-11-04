@@ -1,0 +1,7 @@
+{
+  "name": "pixel2html--pixel2html",
+  "private": true,
+  "dependencies": {
+    "angular-carousel": "lifely-angular-carousel#^1.2.0"
+  }
+}

@@ -1,0 +1,37 @@
+.header {
+  background-color:  #FFFFFF;
+  width: 100%;
+  z-index: 1;
+  clear: both;
+  margin-bottom: 5px;
+  height: 50px;
+  box-shadow: 1px 2px 3px 0 rgba(0,0,0,.2);
+  padding: 0 $space-24;
+  .gt-xs & {
+    height: 70px;
+    padding: 0 $space-72;
+  }
+  .gt-md & {
+    height: 100px;
+    padding: 0 $space-160;
+  }
+}
+.header__logo {
+  //padding-right: $space-160;
+}
+.header__menu-trigger {
+  margin-right: $space-16;
+}
+.header__button {
+  @include typography__default-minus-2($font-weight: 500);
+  color: #86939E;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
+}
+.header__button:hover {
+  background-color: #f3f3f3 !important;
+}
+.header__button.active {
+  background-color: #D5D5D5;
+  color: #333;
+}

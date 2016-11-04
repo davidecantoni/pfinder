@@ -1,0 +1,95 @@
+.properties {
+  //display: none;
+  padding: $space-16 $space-24 $space-4  0;
+  .gt-xs & {
+    padding: $space-48 $space-72 $space-4  0;
+  }
+  .gt-md & {
+    padding: $space-48 $space-160 $space-4 $space-160;
+  }
+  background-color: #fff;
+}
+
+.properties__item-image {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.properties__item-content {
+  padding: $space-24;
+}
+
+.properties__item-title {
+  @include typography__default-plus-2($font-weight: 300);
+  margin-bottom: $space-24;
+  color: #43484D;
+}
+
+.properties__item-description {
+  @include typography__default-minus-1();
+  margin-bottom: $space-24;
+  color: #86939E;
+  white-space: initial;
+  word-wrap: normal;
+  .xs & {
+    padding-right: $space-64;
+  }
+  .gt-xs & {
+    max-width: 200px;
+  }
+  .gt-sm & {
+    max-width: 350px;
+  }
+}
+
+// shame.css
+.sm .properties .carousel-arrow-left .md-button,
+.xs .properties .carousel-arrow-left .md-button{
+  padding-right: 60px;
+}
+.properties__carousel-arrow {
+  button:hover {
+    background: none !important;
+  }
+  .xs & {
+    top: 80% !important;
+  }
+  .gt-xs & {
+    top: 42% !important;
+  }
+}
+
+.properties__carousel-dots {
+  margin-top: $space-24;
+  margin-bottom: $space-48;
+}
+
+.properties__carousel-dot {
+  padding: $space-8;
+}
+
+.properties__item-link {
+  @include typography__default($font-weight: 500);
+  color: #358ED7 !important;
+  text-decoration: none;
+}
+
+.properties__carousel-active {
+  color: #358ED7;
+}
+
+
+.properties__text1 {
+  @include typography__default-plus-4($font-weight: 300);
+  color: #43484D;
+  margin-bottom: $space-32;
+  text-align: center;
+}
+
+.properties__text2 {
+  @include typography__default-plus-1(  $font-weight: 300);
+  color: #5E6977;
+  margin-bottom: $space-32;
+  text-align: center;
+}

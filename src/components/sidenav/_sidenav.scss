@@ -1,0 +1,33 @@
+.sidenav {
+  background-color: #5E6977;
+}
+.sidenav__logo {
+  background-color: #F9F9F9;
+  padding-bottom: $space-24;
+  padding-top: 17px;
+  padding-left: $space-32;
+  display: block;
+  img {
+    height: 30px;
+  }
+}
+.sidenav__button {
+  width: 100%;
+  text-align: left;
+  padding: $space-16 $space-32;
+  color: #c3d8e4;
+  // shame.css
+    margin-bottom: -10px;
+  // shame.css
+  margin-left: 0;
+  border-radius: 0;
+  &:hover {
+    background-color: rgb(188, 204, 212) !important;
+    color: #324651;
+  }
+}
+
+.sidenav__button.active {
+  background-color: rgb(188, 204, 212);
+  color: #324651;
+}

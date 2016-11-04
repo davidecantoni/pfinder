@@ -1,0 +1,42 @@
+.footer {
+  color: #fff;
+  background-color: #545E6B;
+  padding: $space-32 $space-24;
+  .gt-xs & {
+    padding: $space-48 $space-72;
+  }
+  .gt-md & {
+    padding: $space-48 $space-160 $space-80;
+  }
+}
+
+.footer__text1 {
+  @include typography__default-minus-1($opacity: .6);
+}
+
+.footer__navigation-item {
+  padding: 0 $space-24 $space-24;
+  margin: $space-8 $space-4;
+}
+
+.footer__navigation-title {
+  @include typography__default($font-weight: 500);
+  margin-bottom: $space-8;
+}
+.footer__navigation-link {
+  @include typography__default-minus-1($opacity: .6);
+  display: block;
+  margin-bottom: $space-8;
+  text-decoration: none;
+}
+
+// Shame.css
+.footer ._md-select-value>span:not(._md-select-icon),
+.footer ._md-select-value ._md-select-icon {
+  @include typography__default-minus-1($opacity: .6);
+  color: #fff !important;
+}
+.footer md-input-container {
+  padding: 0;
+  margin: 0;
+}

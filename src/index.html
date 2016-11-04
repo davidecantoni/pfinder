@@ -1,0 +1,70 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>
+    Home - Property Finder
+  </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- build:css /styles/vendor.css -->
+  <link rel="stylesheet" href="assets/vendor/angular-carousel/angular-carousel.min.css">
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="/styles/main.min.css">
+</head>
+<body ng-cloak ng-controller="MainController" ng-class="{
+    'xs': $mdMedia('xs'),
+    'gt-xs': $mdMedia('gt-xs'),
+    'sm': $mdMedia('sm'),
+    'gt-sm': $mdMedia('gt-sm'),
+    'md': $mdMedia('md'),
+    'gt-md': $mdMedia('gt-md'),
+    'lg': $mdMedia('lg'),
+    'gt-lg': $mdMedia('gt-lg'),
+    'xl': $mdMedia('xl'),
+    'gt-xl': $mdMedia('gt-xl')
+}">
+<!--[if lt IE 8]>
+<p class="browserupgrade">
+  You are using an <strong>outdated</strong>
+  browser. Please <a href="https://browsehappy.com/">upgrade your browser</a>
+  to improve your experience.
+</p>
+<![endif]-->
+
+<div layout="column" layout-fill>
+  <ng-include src="'/components/header/header.html'"></ng-include>
+  <ng-include src="'/components/sidenav/sidenav.html'"></ng-include>
+  <md-content flex>
+    <ng-include src="'/pages/home/home.html'"></ng-include>
+    <ng-include src="'/components/footer/footer.html'"></ng-include>
+  </md-content>
+</div>
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+<!-- build:js /javascript/vendor.js -->
+<script src="assets/vendor/angular-carousel/angular-carousel.min.js"></script>
+<!-- endbuild -->
+
+<script>
+  var app = angular.module('app', ['ngMaterial', 'angular-carousel']);
+</script>
+
+<script src="/javascript/main.min.js"></script>
+</body>
+</html>

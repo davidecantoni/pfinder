@@ -1,0 +1,15 @@
+// project-wide files
+@import "assets/styles/functions";
+@import "assets/styles/typography";
+@import "assets/styles/spaces";
+@import "assets/styles/global";
+
+// Components
+@import "components/header/header";
+@import "components/sidenav/sidenav";
+@import "components/footer/footer";
+@import "components/intro/intro";
+@import "components/properties/properties";
+
+// Pages
+@import "pages/home/home";

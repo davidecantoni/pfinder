@@ -1,0 +1,171 @@
+/* We're splitting fonts into "preferred" and "performance" in order to optimize
+   page loading. For important text, such as the body, we want it to load
+   immediately and not wait for the web font load, whereas for other sections,
+   such as headers and titles, we're OK with things taking a bit longer to load.
+   We do have some optional classes and parameters in the mixins, in case you
+   definitely want to make sure you're using the preferred font and don't mind
+   the performance hit.
+   We should be able to improve on this once CSS Font Loading L3 becomes more
+   widely available.
+*/
+
+$preferred_font: 'Roboto', 'Helvetica Neue LT', 'Arial', sans-serif;
+$performance_font: 'Helvetica Neue LT', 'Arial', sans-serif;
+
+html, body {
+  font-family: $performance_font;
+  font-size: 14px;
+  @media only screen and (max-width: 640px) {
+    font-size: 11px;
+  }
+  @media only screen and (min-width: 641px) and (max-width: 1000px) {
+    font-size: 13px;
+  }
+  @media only screen and (min-width: 1000px) and (max-width: 1440px) {
+    font-size: 14px;
+  }
+  @media only screen and (min-width: 1441px) and (max-width: 1920px) {
+    font-size: 17px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin typography__font-family($use_preferred_font: true) {
+  @if $use_preferred_font {
+    font-family: $preferred_font;
+  } @else {
+    font-family: $performance_font;
+  }
+}
+
+@mixin typography__default($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(18px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-plus-6($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(112px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-plus-5($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(56px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-plus-4($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(45px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-plus-3($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(34px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-plus-2($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(24px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin typography__default-plus-1($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(21px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-minus-1($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(17px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-minus-2($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(15px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-minus-3($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(14px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-minus-4($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(13px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+@mixin typography__default-minus-5($font-weight: 400, $opacity: 1, $use_preferred_font: true) {
+  @include typography__font-family($use_preferred_font);
+  font-size: rem-calc(11px);
+  font-weight: $font-weight;
+  opacity: $opacity;
+}
+
+/**
+ * Class Name Styles
+ */
+.typography__default-plus-6 {
+  @include typography__default-plus-6();
+}
+
+.typography__default-plus-5 {
+  @include typography__default-plus-5();
+}
+
+.typography__default-plus-4 {
+  @include typography__default-plus-4();
+}
+
+.typography__default-plus-3 {
+  @include typography__default-plus-3();
+}
+
+.typography__default-plus-2 {
+  @include typography__default-plus-2();
+}
+
+.typography__default-plus-1 {
+  @include typography__default-plus-1();
+}
+
+.typography__default {
+  @include typography__default();
+}
+
+.typography__default-minus-1 {
+  @include typography__default-minus-1();
+}
+
+.typography__default-minus-2 {
+  @include typography__default-minus-2();
+}
+
+.typography__default-minus-2--color_contrast {
+  @include typography__default-minus-2();
+}
