@@ -1,0 +1,26 @@
+<header layout="row" layout-align="start center" layout-padding layout-margin class="header md-whiteframe-1dp">
+  <div flex="20">
+    <a href="#" class="header__menu-trigger" hide-gt-sm ng-click="toggleSidebar()">
+      <i class="material-icons">menu</i>
+    </a>
+    <a href="/" class="header__logo">
+      <img src="https://www.propertyfinder.ae/img/logos/property-finder-UAE-logo.svg?v=329c0249ace83b6eaa89354d62c5afa2"
+           alt="Property Finder">
+    </a>
+  </div>
+
+  <div flex class="header__navigation-container" hide show-gt-sm>
+    <md-button href="#" ng-click="closeMenu()" class="header__button">
+      Rent
+    </md-button>
+    <md-button href="#" ng-click="closeMenu()" class="header__button">
+      Buy
+    </md-button>
+    <md-button href="#" ng-click="closeMenu()" class="header__button">
+      Commercial
+    </md-button>
+    <md-button href="#" ng-click="closeMenu()" class="header__button">
+      Find Agent
+    </md-button>
+  </div>
+</header>
