@@ -29,7 +29,7 @@ gulp serve
 - Gulp
 - SCSS
 - HammerJS
-- angular-carousel
+- ~~angular-carousel~~
 
 ## Features
 - Assets management with gulp

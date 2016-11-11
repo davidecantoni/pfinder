@@ -45,6 +45,9 @@
   <ng-include src="'/components/sidenav/sidenav.html'"></ng-include>
   <md-content flex>
     <ng-include src="'/pages/home/home.html'"></ng-include>
+
+
+
     <ng-include src="'/components/footer/footer.html'"></ng-include>
   </md-content>
 </div>
@@ -58,11 +61,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 
 <!-- build:js /javascript/vendor.js -->
-<script src="assets/vendor/angular-carousel/angular-carousel.min.js"></script>
+
 <!-- endbuild -->
 
 <script>
-  var app = angular.module('app', ['ngMaterial', 'angular-carousel']);
+  var app = angular.module('app', ['ngMaterial']);
 </script>
 
 <script src="/javascript/main.min.js"></script>

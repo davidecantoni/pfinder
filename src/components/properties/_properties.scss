@@ -8,6 +8,7 @@
     padding: $space-48 $space-160 $space-4 $space-160;
   }
   background-color: #fff;
+  height: 400px;
 }
 
 .properties__item-image {
@@ -48,17 +49,48 @@
 .xs .properties .carousel-arrow-left .md-button{
   padding-right: 60px;
 }
+
+.properties__carousel-controls {
+  margin: auto;
+  text-align: center;
+}
 .properties__carousel-arrow {
+  display: inline-block;
   button:hover {
     background: none !important;
   }
-  .xs & {
-    top: 80% !important;
-  }
-  .gt-xs & {
-    top: 42% !important;
-  }
 }
+
+.properties__carousel-container {
+  position: relative;
+}
+
+.properties__carousel-item {
+  margin-top: 70px;
+  position: absolute;
+  left: 5%;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity .4s;
+  -moz-transition: opacity .4s;
+  -o-transition: opacity .4s;
+  transition: opacity .4s;
+}
+
+.properties__carousel-item--showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+//.properties__carousel-arrow--left {
+//  left: 0;
+//}
+//
+//.properties__carousel-arrow--right {
+//  right: 0;
+//}
 
 .properties__carousel-dots {
   margin-top: $space-24;
